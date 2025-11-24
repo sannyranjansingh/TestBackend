@@ -11,8 +11,8 @@ app.get("/", (req, res) => {
     ">
       <h1 style="color:#ff006f;">😂 Surprise! 😂</h1>
       <h2>Aye dost, tu seriously ye link open kar liya? 🤣</h2>
-      <p style="font-size:20px;">Samiksha ke liye thoda smile kar de 😍</p>
-      <h3>😎🔥 You are officially hacked by Friendship! 🔥😎</h3>
+      <p style="font-size:20px;">Samiksha jee thoda smile kar de 😍</p>
+      <h3>😎🔥 You are officially hacked ho chuki Friendship! 🔥😎</h3>
     </div>
   `);
 });

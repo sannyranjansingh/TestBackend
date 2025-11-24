@@ -1,26 +1,28 @@
-const express = require("express");
-const cors = require("cors");
-
+import express from "express";
 const app = express();
-app.use(cors());
-app.use(express.json());
 
-// Route 1
+// Funny home page
 app.get("/", (req, res) => {
-  res.send("Backend is running successfully!");
+  res.send(`
+    <div style="
+      font-family: Arial; 
+      text-align: center; 
+      margin-top: 100px;
+    ">
+      <h1 style="color:#ff006f;">😂 Surprise! 😂</h1>
+      <h2>Aye dost, tu seriously ye link open kar liya? 🤣</h2>
+      <p style="font-size:20px;">Samiksha ke liye thoda smile kar de 😍</p>
+      <h3>😎🔥 You are officially hacked by Friendship! 🔥😎</h3>
+    </div>
+  `);
 });
 
-// Route 2
-app.get("/hello", (req, res) => {
-  res.json({ message: "Hello Dost! Your backend is LIVE 🚀" });
+// Another funny route
+app.get("/msg", (req, res) => {
+  res.send({
+    message: "Tu bohot cute lagta hai link pe click karte hue 😆",
+  });
 });
 
-// Route 3
-app.post("/sum", (req, res) => {
-  const { a, b } = req.body;
-  res.json({ result: a + b });
-});
-
-// Port from Render
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log("Server running on port " + PORT));
